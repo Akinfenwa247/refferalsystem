@@ -26,7 +26,7 @@ class RegisterController extends Controller
             'affiliate_id' => str_random(10),
             'referred_by'=> $request['referred_by'],
         ]);
-        return redirect('home');
+        return redirect()->route('login')->with('status', 'Registration Successful, Please Provide Your Credentials To Login');
     }
 
 
