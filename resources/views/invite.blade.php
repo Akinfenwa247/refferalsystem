@@ -1,6 +1,9 @@
 <html>
 <body>
-    <p>Hi, your friend {{Auth::user()->name}} is inviting you to join this website, kindly click on the following link {{url('register/').'/'.Auth::user()->affiliate_id}}</p>
+    <h3>Hi {{$name}},</h3>
+    <p>your friend <strong>{{$sender}}</strong>has invited you to join us.</p>
+    <p>Kindly click <a href="{{$link}}">Here</a> to start</p>
+    <p>Regards.</p>
 </body>
 </html>
 

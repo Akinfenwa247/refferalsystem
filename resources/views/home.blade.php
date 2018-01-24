@@ -15,14 +15,14 @@
                     @endif
 
                     <div class="panel-body">
-                       <h4>Invite Your Friend</h4>
+                       <h2>Invite Your Friend</h2>
                     </div>
 
-                    <form method="post" action="{{route('invite')}}">
+                    <form method="get" action="{{route('invite')}}">
                         {{ csrf_field() }}
-                        <input type="text" placeholder="Name">
-                        <input type="email" placeholder="Email">
-                        <button>Submit</button>
+                        <input type="text" class="form-control" name="name" placeholder="Name"><br>
+                        <input type="email" class="form-control" name="email" placeholder="Email"><br>
+                        <button class="btn btn-primary">Submit</button>
                     </form>
 
                 </div>
